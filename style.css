@@ -1,7 +1,24 @@
 body{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+
+    margin-inline: auto;
     height: 100vh;
+    max-width: 400px;
+    max-height: 600px;
+    border: 3px solid lightblue;
+    border-radius: 16px;
+}
+
+#overview{
+    display: flex;
+    overflow: scroll;
+    flex-direction: column;
+    max-height: 400px;
+}
+
+#Menu-Bar{
+    display: flex;
+
+    justify-content: space-around ;
+    align-items: center;
+
 }
