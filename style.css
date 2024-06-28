@@ -1,5 +1,5 @@
 body{
-
+    display: grid;
     margin-inline: auto;
     height: 100vh;
     max-width: 400px;
@@ -12,7 +12,9 @@ body{
     display: flex;
     overflow: scroll;
     flex-direction: column;
-    max-height: 400px;
+    height: 400px;
+    justify-content: space-around;
+    align-items: flex-end;
 }
 
 #Menu-Bar{
