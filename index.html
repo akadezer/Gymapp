@@ -7,31 +7,27 @@
     <title>Gymapp</title>
     </head>
 <body>
-  
 
-    <div id="overview">
+    <div id="main">
 
-        <button id = "add"  >+</button>
-    </div>
+       
 
-    <dialog id = "modal">
-        <div id=newExercise>
-        <label for="exerciseFor">Exercise:</label>
-        <input type="text" id="exerciseFor">
-        <label for="weightFor">Weight:</label>
-        <input type="number" id="weightFor">
-        <label for="repetitionsFor">Reps:</label>
-        <input type="number" id="repetitionsFor">
-        <Button id = "save"> save </Button> 
-  
+        <div id= "overview">
+            <p> 
+                
+            </p>
+            <button onclick="Create_new_exercise()" >+</button>
         </div>
-        </dialog>
-        <div id = "Menu-Bar">
+        <div id = "menu-bar">
             <button id = "Workouts">Workouts</button>
             <button id = "History">History</button>
-    
-    
+            
+            
         </div>
-    <script src="script.js"></script>
-</body>
-</html>
+
+        <div id="exerciseOverview"></div>
+        
+    </div>
+        <script src="script.js"></script>
+    </body>
+    </html>
