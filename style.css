@@ -20,33 +20,41 @@ font-family: 'Poppins', sans-serif;
     flex-wrap: wrap;
     overflow-y: scroll;
     flex-direction: column;
-    height: 500px;
+    overflow-x: hidden;
     border-radius: 16px;
     justify-content: space-around;
     align-items: flex-end;
+    position: relative;
+    max-width: 100%;
+    padding-left: 8px;
+
 }
 #menu-bar{
+    padding: 16px;
     display: flex;
     border-radius: 16px;
     justify-content: space-around ;
     align-items: center;
     background-color: rgb(80, 80, 255);
+    
 
 }
 #add{
     padding: 4px 16px;
     margin: auto;
-font-size: 32px;
-position: absolute;
-bottom: 45%;
-right: 42%;
-border-radius: 32px;
-background-color: rgb(115, 115, 253);
-border: none;}
+    font-size: 32px;
+    position: sticky ;
+    border-radius: 32px;
+    background-color: rgb(115, 115, 253);
+    border: none;
+    top: 82%;
+    right: 8%;
+}
 
 #Workouts{
+
     border-radius: 16px;
-    background-color: rgb(127, 127, 255);
+    background-color: rgb(127, 127, 255); 
     border: none;
     size: 32px;
 }
