@@ -12,21 +12,20 @@ font-family: 'Poppins', sans-serif;
     max-height: 600px;
     border: 3px solid lightblue;
     border-radius: 16px;
-    background-color: rgb(55, 55, 221);
+    background-color: rgb(41, 41, 165);
 }
 
-#overview{
-    display: flex;
-    flex-wrap: wrap;
+.overview{
+    display: grid;
     overflow-y: scroll;
-    flex-direction: column;
+  
     overflow-x: hidden;
     border-radius: 16px;
     justify-content: space-around;
-    align-items: flex-end;
     position: relative;
     max-width: 100%;
     padding-left: 8px;
+    height: 500px;
 
 }
 #menu-bar{
@@ -36,19 +35,24 @@ font-family: 'Poppins', sans-serif;
     justify-content: space-around ;
     align-items: center;
     background-color: rgb(80, 80, 255);
+    max-height: 100px;
     
 
 }
+
 #add{
-    padding: 4px 16px;
-    margin: auto;
+    height: 60px;
+    width: 60px;
+    padding: auto;
     font-size: 32px;
-    position: sticky ;
-    border-radius: 32px;
+    border-radius: 48px;
     background-color: rgb(115, 115, 253);
     border: none;
-    top: 82%;
-    right: 8%;
+    position: sticky;
+    left: 80%;
+    top: 80%;
+    bottom: 8%;
+    
 }
 
 #Workouts{
@@ -76,4 +80,52 @@ font-family: 'Poppins', sans-serif;
 #add:hover{
     background-color: rgb(72, 72, 156);
     cursor: pointer;
+}
+
+.workoutWidget{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+position:relative;
+width: 300px;
+height: 200px;
+max-width: 100%;
+padding: 8px;
+background-color: rgb(86, 89, 255);
+border-radius: 16px;
+margin: 8px;
+
+}
+
+.workoutWidget:hover{
+    cursor: pointer;
+    background-color:rgb(41, 41, 131) ;
+}
+
+.delete{
+    display: flex;
+    position: relative;
+    padding: auto;
+    left: 80%;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    justify-content: center;
+
+    
+}
+.delete:hover{
+    background-color: rgb(185, 185, 245);
+    cursor: pointer;
+}
+
+.workoutSelection{
+    height: 500px;
+    width: 400px;
+
+
+}
+.workoutSelection::backdrop{
+     background: purple;
 }
