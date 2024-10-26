@@ -1,76 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Gymapp</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    </head>
-    <body>
-        <div id="main">
-            
-            
-            <div class= "overview">
-                
-                <button id="add"  >+</button>
-            </div>
-            
-            <div id = "menu-bar">
-                
-                
-                <button id = "Workouts">Workouts</button>
-                <button id = "History">History</button>
-                
-                
-                
-            </div>
-            
-        </div>
-        <dialog  open class="workoutSelection" id="workoutSelection">
-            <form action="">
-                <div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Gymapp</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <div id="main">
+      <div class="overview">
+        <button id="add">+</button>
+      </div>
 
-                    
-                    <input type="text" id="title" name="title" placeholder="Title" required>
-                </div>
-                <div>
-                    
-                    <input type="date" name="date" id="date">
-                </div>
-                <div class="excerciseOverview">
-                    <div>
-                        
-                        <label for="exercise">Excercise:</label>
-                        <input type="text" id="exercise" name="exercise" placeholder="exercise">
-                    </div>
-                    <div class="set">
-                        
-                        <label>Set 1: </label>
-                        <div>
-                            <label for="reps">Repetitions:</label>
-                            <input type="number" name="reps" id="reps" placeholder="0">
-                        </div>
-                        <div>
-                            
-                            <label for="weight">Weight:</label>
-                            <input type="number" name="weight" id="weight" placeholder="0">
-                            <label for="weight">kg</label>
-                        </div>
-                        
-                    </div>
-                    <div>
-                        <input type="button" value="New Set" class="newSetBtn">
-                    </div>
-                    
-                    
-                </div>
-                <input type="button" value="new Excercise" id="newExcBtn">
-                    
-                    
-                </form>
-            </dialog>
-            
-        <script src="script.js"></script>
-    </body>
-    </html>
+      <div id="menu-bar">
+        <button id="Workouts">Workouts</button>
+        <button id="History">History</button>
+      </div>
+    </div>
+
+    <dialog class="workoutSelection">
+      <form action="">
+        <input
+          type="text"
+          class="title"
+          name="title"
+          placeholder="Title"
+          required
+        />
+
+        <input type="date" name="date" class="date" />
+
+        <div class="excerciseOverview">
+          <div class="newExercise">
+            <div>
+              <label for="exercise" class="exerciseLabel">Exercise:</label>
+              <input
+                type="text"
+                class="excercise"
+                name="exercise"
+                placeholder="exercise"
+              />
+            </div>
+
+            <div class="set">
+              <p>Set 1:</p>
+
+              <table>
+                <tr>
+                  <td>
+                    <label for="reps">Repetitions:</label>
+                  </td>
+                  <td>
+                    <input
+                      type="number"
+                      name="reps"
+                      class="reps"
+                      placeholder="0"
+                    />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <label for="weight">Weight:</label>
+                  </td>
+                  <td>
+                    <input
+                      type="number"
+                      name="weight"
+                      class="weight"
+                      placeholder="0"
+                    />
+                  </td>
+                  <td>
+                    <label for="weight">kg</label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <input
+              type="button"
+              value="New Set"
+              class="newSetBtn dialogButton"
+            />
+          </div>
+        </div>
+        <input
+          type="button"
+          value="new Excercise"
+          id="newExcBtn"
+          class="dialogButton"
+        />
+        <br />
+        <input type="button" value="Cancel" class="cancel dialogButton" />
+        <input type="submit" value="Speichern" class="dialogButton" />
+      </form>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>

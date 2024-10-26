@@ -1,131 +1,165 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-*{
-font-family: 'Poppins', sans-serif;
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
 }
 
-#main{
-    display: grid;
-    margin-inline: auto;
-    height: 100vh;
-    max-width: 400px;
-    max-height: 600px;
-    border: 3px solid lightblue;
-    border-radius: 16px;
-    background-color: rgb(41, 41, 165);
+#main {
+  display: grid;
+  margin-inline: auto;
+  height: 100vh;
+  max-width: 400px;
+  max-height: 600px;
+  border: 3px solid lightblue;
+  border-radius: 16px;
+  background-color: rgb(41, 41, 165);
 }
 
-.overview{
-    display: grid;
-    overflow-y: scroll;
-  
-    overflow-x: hidden;
-    border-radius: 16px;
-    justify-content: space-around;
-    position: relative;
-    max-width: 100%;
-    padding-left: 8px;
-    height: 500px;
-
+.overview {
+  display: grid;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 16px;
+  justify-content: space-around;
+  position: relative;
+  max-width: 100%;
+  padding-left: 8px;
+  height: 500px;
 }
-#menu-bar{
-    padding: 16px;
-    display: flex;
-    border-radius: 16px;
-    justify-content: space-around ;
-    align-items: center;
-    background-color: rgb(80, 80, 255);
-    max-height: 100px;
-    
-
+#menu-bar {
+  padding: 16px;
+  display: flex;
+  border-radius: 16px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(80, 80, 255);
+  max-height: 100px;
 }
 
-#add{
-    height: 60px;
-    width: 60px;
-    padding: auto;
-    font-size: 32px;
-    border-radius: 48px;
-    background-color: rgb(115, 115, 253);
-    border: none;
-    position: sticky;
-    left: 80%;
-    top: 80%;
-    bottom: 8%;
-    
+#add {
+  height: 60px;
+  width: 60px;
+  padding: auto;
+  font-size: 32px;
+  border-radius: 48px;
+  background-color: rgb(115, 115, 253);
+  border: none;
+  position: sticky;
+  left: 80%;
+  top: 80%;
+  bottom: 8%;
 }
 
-#Workouts{
-
-    border-radius: 16px;
-    background-color: rgb(127, 127, 255); 
-    border: none;
-    size: 32px;
+#Workouts {
+  border-radius: 16px;
+  background-color: rgb(127, 127, 255);
+  border: none;
+  size: 32px;
 }
-#History{
-    border-radius: 16px;
-    background-color: rgb(127, 127, 255);
-    border: none;
-}
-
-#History:hover{
-    background-color: rgb(72, 72, 156);
-   cursor: pointer;
-}
-#Workouts:hover{
-    background-color: rgb(72, 72, 156);
-    cursor: pointer;
-   
-}
-#add:hover{
-    background-color: rgb(72, 72, 156);
-    cursor: pointer;
+#History {
+  border-radius: 16px;
+  background-color: rgb(127, 127, 255);
+  border: none;
 }
 
-.workoutWidget{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-position:relative;
-width: 300px;
-height: 200px;
-max-width: 100%;
-padding: 8px;
-background-color: rgb(86, 89, 255);
-border-radius: 16px;
-margin: 8px;
-
+#History:hover {
+  background-color: rgb(72, 72, 156);
+  cursor: pointer;
+}
+#Workouts:hover {
+  background-color: rgb(72, 72, 156);
+  cursor: pointer;
+}
+#add:hover {
+  background-color: rgb(72, 72, 156);
+  cursor: pointer;
 }
 
-.workoutWidget:hover{
-    cursor: pointer;
-    background-color:rgb(41, 41, 131) ;
+.workoutWidget {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  width: 300px;
+  height: 200px;
+  max-width: 100%;
+  padding: 8px;
+  background-color: rgb(86, 89, 255);
+  border-radius: 16px;
+  margin: 8px;
 }
 
-.delete{
-    display: flex;
-    position: relative;
-    padding: auto;
-    left: 80%;
-    background: none;
-    border: none;
-    border-radius: 8px;
-    justify-content: center;
-
-    
-}
-.delete:hover{
-    background-color: rgb(185, 185, 245);
-    cursor: pointer;
+.workoutWidget:hover {
+  cursor: pointer;
+  background-color: rgb(41, 41, 131);
 }
 
-.workoutSelection{
-    height: 500px;
-    width: 400px;
-
-
+.delete {
+  display: flex;
+  position: relative;
+  padding: auto;
+  left: 80%;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  justify-content: center;
 }
-.workoutSelection::backdrop{
-     background: purple;
+.delete:hover {
+  background-color: rgb(185, 185, 245);
+  cursor: pointer;
+}
+
+dialog {
+  overflow-x: scroll;
+  background-color: rgb(41, 41, 165);
+  color: white;
+  border: 3px solid lightblue;
+  border-radius: 16px;
+  height: 100vh;
+  max-width: 400px;
+  max-height: 600px;
+  margin-inline: auto;
+}
+
+dialog > * {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.date {
+  margin-top: 20px;
+}
+.newExercise {
+  margin-top: 20px;
+}
+
+.exerciseLabel {
+  font-size: 20px;
+}
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  border: none;
+  background-color: white;
+  font-size: 20px;
+
+  border-radius: 8px;
+}
+
+.set > p {
+  font-size: 20px;
+}
+
+.dialogButton {
+  margin-top: 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(127, 127, 255);
+  font-size: 20px;
+  color: white;
+}
+
+.dialogButton:hover {
+  background-color: rgb(72, 72, 156);
+  cursor: pointer;
 }
