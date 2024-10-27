@@ -4,10 +4,19 @@ const workoutSelection = document.querySelectorAll(".workoutSelection");
 const closeModal = document.querySelector(".cancel");
 
 var newSetBtns = document.querySelectorAll(".newSetBtn");
-const excBTN = document.getElementById("newExcBtn");
-const excOverview = document.querySelector(".excerciseOverview");
+const excBTN = document.querySelectorAll(".newExcBtn");
+// const excOverview = document.querySelector(".excerciseOverview");
+
+//initiate functionality to buttons
+addExercise();
+addNewSet();
 
 // add functionality to setButtons
+
+function addExercise() {
+  let newExcBtn = excBTN[excBTN.length - 1];
+  newExcBtn.addEventListener("click", () => addExerciseLayout(newExcBtn));
+}
 
 function addNewSet() {
   let elem = newSetBtns[newSetBtns.length - 1];
@@ -18,8 +27,6 @@ function addNewSet() {
     addSetLayout(elem);
   });
 }
-
-addNewSet();
 
 // adding set Layout after pressing new set Button
 
@@ -99,63 +106,80 @@ function deleteSet(dSet, elem) {
 }
 
 // adding new exercise
-
-excBTN.addEventListener("click", () => {
+function addExerciseLayout(newExcBtn) {
+  let excOverview = newExcBtn.previousElementSibling;
   excOverview.insertAdjacentHTML(
     "beforeend",
     `<div class = newExercise>
-                    <div>
-                        <label for="exercise" class="exerciseLabel">Exercise:</label>
-                        <input type="text" class="exercise" name="exercise" placeholder="exercise">
-                    </div>
-                    <div class="set">
-                        
-                        <p>Set 1: <p>
-                        <table>
-                <tr>
-                  <td>
-                    <label for="reps">Repetitions:</label>
-                  </td>
-                  <td>
-                    <input
-                      type="number"
-                      name="reps"
-                      class="reps"
-                      placeholder="0"
-                    />
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>
-                    <label for="weight">Weight:</label>
-                  </td>
-                  <td>
-                    <input
-                      type="number"
-                      name="weight"
-                      class="weight"
-                      placeholder="0"
-                    />
-                  </td>
-                  <td>
-                    <label for="weight">kg</label>
-                  </td>
-                </tr>
-              </table>
-                        
-                    </div>
-                
-                        <input type="button" value="New Set" class="newSetBtn dialogButton">
-                
-            </div>      
-                `
+      <div>
+      <label for="exercise" class="exerciseLabel">Exercise:</label>
+      <input type="text" class="exercise" name="exercise" placeholder="exercise">
+      </div>
+      <div class="set">
+      
+      <p>Set 1: <p>
+      <table>
+      <tr>
+      <td>
+      <label for="reps">Repetitions:</label>
+      </td>
+      <td>
+      <input
+      type="number"
+      name="reps"
+      class="reps"
+      placeholder="0"
+      />
+      </td>
+      </tr>
+      
+      <tr>
+      <td>
+      <label for="weight">Weight:</label>
+      </td>
+      <td>
+      <input
+      type="number"
+      name="weight"
+      class="weight"
+      placeholder="0"
+      />
+      </td>
+      <td>
+      <label for="weight">kg</label>
+      </td>
+      </tr>
+      </table>
+      
+      </div>
+      
+      <input type="button" value="New Set" class="newSetBtn dialogButton">
+      <input type="button" value="Delete Exercise" class="deleteExercise dialogButton">
+      </div>      
+      `
   );
 
   newSetBtns = document.querySelectorAll(".newSetBtn");
-
+  deleteExerciseBtn = document.querySelectorAll(".deleteExercise");
+  deleteExercise(deleteExerciseBtn);
   addNewSet();
-});
+}
+
+function deleteExercise(deleteExerciseBtn) {
+  let i = deleteExerciseBtn[deleteExerciseBtn.length - 1];
+  let grandparent = i.parentElement.parentElement;
+  console.log(grandparent);
+  let allExercises = grandparent.querySelectorAll(".newExercise");
+  if (allExercises.length < 1) {
+    deleteExercise.remove();
+  } else {
+    let i = deleteExerciseBtn[deleteExerciseBtn.length - 1];
+    i.addEventListener("click", () => {
+      let parent = i.parentElement;
+      parent.remove();
+    });
+  }
+}
 
 add.addEventListener("click", function () {
   //   overview.insertAdjacentHTML(
