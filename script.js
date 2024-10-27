@@ -68,6 +68,34 @@ function addSetLayout(elem) {
                </div>   
                   `
   );
+
+  if (setcount == 2) {
+    elem.insertAdjacentHTML(
+      "afterend",
+      ` 
+              <input
+              type="button"
+              value="Delete Set"
+              class="deleteSetBtn dialogButton"
+            />`
+    );
+    let dSet = elem.nextElementSibling;
+    dSet.addEventListener("click", () => {
+      deleteSet(dSet, elem);
+    });
+  }
+}
+
+// functionality for delete set button
+
+function deleteSet(dSet, elem) {
+  let set = elem.previousElementSibling;
+  let parent = elem.parentElement;
+  set.remove();
+  console.log;
+  if (parent.querySelectorAll(".set").length == 1) {
+    dSet.remove();
+  }
 }
 
 // adding new exercise
@@ -130,17 +158,20 @@ excBTN.addEventListener("click", () => {
 });
 
 add.addEventListener("click", function () {
-  // overview.insertAdjacentHTML("afterbegin", `
-  //                 <div class="workoutWidget" onclick="openWidget()">
-  //             <h1> Chest day</h1>
-  //             <p>03.08.24</p>
-  //             <button type="button" class="delete"><span class="material-symbols-outlined">
-  //                 delete
-  //                 </span>
-  //             </button>
-  //         </div>`);
-  // workoutSelection.showModal();
-  // workoutSelection.close();
+  //   overview.insertAdjacentHTML(
+  //     "afterbegin",
+  //     `
+  //                   <div class="workoutWidget" onclick="openWidget()">
+  //               <h1> Chest day</h1>
+  //               <p>03.08.24</p>
+  //               <button type="button" class="delete"><span class="material-symbols-outlined">
+  //                   delete
+  //                   </span>
+  //               </button>
+  //           </div>`
+  //   );
+  //   workoutSelection.showModal();
+  //   workoutSelection.close();
   let openModal = workoutSelection[workoutSelection.length - 1];
   openModal.showModal();
 });
