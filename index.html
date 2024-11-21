@@ -13,6 +13,85 @@
   <body>
     <div id="main">
       <div class="overview">
+        <dialog class="workoutSelection">
+          <form action="">
+            <input
+              type="text"
+              class="title"
+              name="title"
+              placeholder="Title"
+              required
+            />
+
+            <input type="date" name="date" class="date" />
+
+            <div class="excerciseOverview">
+              <div class="newExercise">
+                <div>
+                  <label for="exercise" class="exerciseLabel">Exercise:</label>
+                  <input
+                    type="text"
+                    class="excercise"
+                    name="exercise"
+                    placeholder="exercise"
+                  />
+                </div>
+
+                <div class="set">
+                  <p>Set 1:</p>
+
+                  <table>
+                    <tr>
+                      <td>
+                        <label for="reps">Repetitions:</label>
+                      </td>
+                      <td>
+                        <input
+                          type="number"
+                          name="reps"
+                          class="reps"
+                          placeholder="0"
+                        />
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <label for="weight">Weight:</label>
+                      </td>
+                      <td>
+                        <input
+                          type="number"
+                          name="weight"
+                          class="weight"
+                          placeholder="0"
+                        />
+                      </td>
+                      <td>
+                        <label for="weight">kg</label>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <input
+                  type="button"
+                  value="New Set"
+                  class="newSetBtn dialogButton"
+                />
+              </div>
+            </div>
+            <input
+              type="button"
+              value="new Excercise"
+              class="newExcBtn dialogButton"
+            />
+            <br />
+            <input type="button" value="Cancel" class="cancel dialogButton" />
+            <input type="submit" value="Speichern" class="dialogButton" />
+          </form>
+        </dialog>
+
         <button id="add">+</button>
       </div>
 
@@ -21,85 +100,10 @@
         <button id="History">History</button>
       </div>
     </div>
+    fgtzfuz
+    zgigzli
+    iuvjg
 
-    <dialog class="workoutSelection">
-      <form action="">
-        <input
-          type="text"
-          class="title"
-          name="title"
-          placeholder="Title"
-          required
-        />
-
-        <input type="date" name="date" class="date" />
-
-        <div class="excerciseOverview">
-          <div class="newExercise">
-            <div>
-              <label for="exercise" class="exerciseLabel">Exercise:</label>
-              <input
-                type="text"
-                class="excercise"
-                name="exercise"
-                placeholder="exercise"
-              />
-            </div>
-
-            <div class="set">
-              <p>Set 1:</p>
-
-              <table>
-                <tr>
-                  <td>
-                    <label for="reps">Repetitions:</label>
-                  </td>
-                  <td>
-                    <input
-                      type="number"
-                      name="reps"
-                      class="reps"
-                      placeholder="0"
-                    />
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>
-                    <label for="weight">Weight:</label>
-                  </td>
-                  <td>
-                    <input
-                      type="number"
-                      name="weight"
-                      class="weight"
-                      placeholder="0"
-                    />
-                  </td>
-                  <td>
-                    <label for="weight">kg</label>
-                  </td>
-                </tr>
-              </table>
-            </div>
-
-            <input
-              type="button"
-              value="New Set"
-              class="newSetBtn dialogButton"
-            />
-          </div>
-        </div>
-        <input
-          type="button"
-          value="new Excercise"
-          class="newExcBtn dialogButton"
-        />
-        <br />
-        <input type="button" value="Cancel" class="cancel dialogButton" />
-        <input type="submit" value="Speichern" class="dialogButton" />
-      </form>
-    </dialog>
     <script src="script.js"></script>
   </body>
-</html>
+</html> 

@@ -130,11 +130,11 @@ dialog > * {
   margin-top: 20px;
 }
 .newExercise {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .exerciseLabel {
-  font-size: 20px;
+  font-size: 30px;
 }
 input[type="text"],
 input[type="number"],

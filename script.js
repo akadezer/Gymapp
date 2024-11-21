@@ -5,7 +5,6 @@ const closeModal = document.querySelector(".cancel");
 
 var newSetBtns = document.querySelectorAll(".newSetBtn");
 const excBTN = document.querySelectorAll(".newExcBtn");
-// const excOverview = document.querySelector(".excerciseOverview");
 
 //initiate functionality to buttons
 addExercise();
@@ -182,20 +181,6 @@ function deleteExercise(deleteExerciseBtn) {
 }
 
 add.addEventListener("click", function () {
-  //   overview.insertAdjacentHTML(
-  //     "afterbegin",
-  //     `
-  //                   <div class="workoutWidget" onclick="openWidget()">
-  //               <h1> Chest day</h1>
-  //               <p>03.08.24</p>
-  //               <button type="button" class="delete"><span class="material-symbols-outlined">
-  //                   delete
-  //                   </span>
-  //               </button>
-  //           </div>`
-  //   );
-  //   workoutSelection.showModal();
-  //   workoutSelection.close();
   let openModal = workoutSelection[workoutSelection.length - 1];
   openModal.showModal();
 });
@@ -204,11 +189,3 @@ closeModal.addEventListener("click", () => {
   let openModal = workoutSelection[workoutSelection.length - 1];
   openModal = openModal.close();
 });
-
-const auswahl = document.querySelector(".workoutWidget");
-
-// auswahl.addEventListener("click", function() {
-//     console.log("hi");
-// });
-
-// addEventListener("click", () => {console.log("hi");})
