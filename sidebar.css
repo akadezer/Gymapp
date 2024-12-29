@@ -1,0 +1,22 @@
+.sidenav {
+  background-color: blue;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+.material-symbols-outlined {
+  font-size: 3em;
+  color: white;
+  margin-top: 20px;
+}
+
+#settings {
+  position: absolute;
+  bottom: 0;
+  margin-top: 0px;
+}

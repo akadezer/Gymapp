@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="sidebar.css" />
+    <link rel="stylesheet" href="settings.css" />
+    <title>Settings</title>
+  </head>
+  <body>
+    <div class="sidenav">
+      <a href="mainpage.html"
+        ><span class="material-symbols-outlined"> home </span></a
+      >
+      <a href="workouts.html"
+        ><span class="material-symbols-outlined"> exercise </span></a
+      >
+      <a href="history.html"
+        ><span class="material-symbols-outlined"> calendar_month </span></a
+      >
+      <a href="settings.html " id="settings"
+        ><span class="material-symbols-outlined"> settings </span></a
+      >
+    </div>
+    <div class="main">
+      <h1>Settings</h1>
+      <p><strong>Email:</strong> maxmustermann@gmail.com</p>
+      <p><strong>Username:</strong> Max Mustermann</p>
+      <button>Change Settings</button>
+      <dialog>
+        <header><h1>Change Settings ?</h1></header>
+        <hr />
+        <form action="" class="changeSettings">
+          <label for="email">Email:</label>
+          <input type="text" name="email" id="email" placeholder="Email" />
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Username"
+          />
+          <label for="password">password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="password"
+          />
+          <label for="confirmPassword">Confirm password:</label>
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder="password"
+          />
+          <footer>
+            <hr />
+            <div class="changeButtons">
+              <button id="cancel">Cancel</button>
+              <button type="submit" id="confirm">Confirm Change</button>
+            </div>
+          </footer>
+        </form>
+      </dialog>
+    </div>
+  </body>
+</html>
