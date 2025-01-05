@@ -7,3 +7,57 @@
   margin-left: 100px;
   font-size: 2em;
 }
+
+h1 {
+  max-width: fit-content;
+}
+
+.calendar {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 2em;
+}
+
+.month-year {
+  width: 1000px;
+  border: 2px solid black;
+  border-radius: 16px;
+  box-shadow: 2px 2px black;
+}
+
+.year {
+  padding: 8px;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+li {
+  list-style-type: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: slategray;
+}
+
+.ltgt {
+  width: 50px;
+}
+
+.ltgt:hover {
+  cursor: pointer;
+  background-color: slategray;
+}
+
+ul {
+  padding: 8px;
+}
