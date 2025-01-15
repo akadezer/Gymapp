@@ -35,10 +35,6 @@ h1 {
   justify-content: space-between;
 }
 
-li {
-  list-style-type: none;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -60,4 +56,5 @@ li:hover {
 
 ul {
   padding: 8px;
+  list-style-type: none;
 }
